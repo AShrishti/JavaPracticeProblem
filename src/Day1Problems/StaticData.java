@@ -18,8 +18,10 @@ public class StaticData {
 	
 public static void main(String[] args) {
 	System.out.println(val1);
-	
+
 	printMessage();
+	
+	
 	
 }
 }
