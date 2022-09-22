@@ -2,22 +2,27 @@ package Day13PracticeProblems;
 
 public class CompareToInteger {
 
-	@SuppressWarnings("removal")
+	
+	public static <T extends Comparable<T>> T maximum(T a, T b,T c) {
+
+		T max = a; // assume a is initially the largest
+
+		if (b.compareTo(max) > 0)
+			max = b; // b is the largest so far
+
+		if (c.compareTo(max) > 0)
+			max = c; //  is the largest
+
+		return max;
+	}
+
 	public static void main(String[] args) {
 
-		Integer num1 = Integer.valueOf(10);
-		Integer num2 = Integer.valueOf(29);
-		Integer num3 = Integer.valueOf(11);
-
-		
-		int max = num1; // assume num1 is initially the largest
-
-	    if (num2.compareTo(max) > 0)
-	      max = num2; // num2 is the largest so far
-
-	    if (num3.compareTo(max) > 0)
-	      max = num3; // num3 is the largest
-
-	 System.out.println(max+" is the maximum of all");
+		int maxInt = maximum(10, 29, 39);
+		String maxString = maximum("apple", "Peach", "Banana");
+		double maxFloat= maximum(1.0,4.5,8.8);
+		System.out.println(maxInt + " is the maximum of all Integers");
+		System.out.println(maxString + " is the maximum of all input String");
+		System.out.println(maxFloat + " is the maximum of all input value");
 	}
 }
