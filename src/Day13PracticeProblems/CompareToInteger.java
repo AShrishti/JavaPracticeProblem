@@ -2,7 +2,7 @@ package Day13PracticeProblems;
 
 public class CompareToInteger {
 
-	@SuppressWarnings("removal")
+	
 	public static void main(String[] args) {
 
 		Integer num1 = Integer.valueOf(10);
